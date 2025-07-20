@@ -1,4 +1,5 @@
 {
     "editor.cursorStyle": "line",
-    "github.copilot.advanced": {}
+    "github.copilot.advanced": {},
+    "java.debug.settings.onBuildFailureProceed": true
 }

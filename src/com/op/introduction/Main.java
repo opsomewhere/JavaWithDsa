@@ -5,6 +5,7 @@ public class Main{
         //store 5 roll umber
         int[] number = new int[5];
 
+        System.out.println("checking");
         // store 5 names
         String[] names = new String[5];
 

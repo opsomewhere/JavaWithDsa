@@ -1,6 +1,6 @@
 package com.op.singleton;
 
-import com.kunal.access.A;
+import com.op.access.A;
 
 import java.util.ArrayList;
 import java.util.Collections;

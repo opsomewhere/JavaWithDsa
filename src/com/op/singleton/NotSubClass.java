@@ -1,6 +1,6 @@
 package com.op.singleton;
 
-import com.kunal.access.A;
+import com.op.access.A;
 
 public class NotSubClass{
 

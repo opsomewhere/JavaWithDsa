@@ -5,7 +5,6 @@ import java.util.*;
 public class IfElse {
 
     public static void main(String[] args) {
-
         // conditional statements
         Scanner sc = new Scanner(System.in);
 

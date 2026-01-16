@@ -1,6 +1,7 @@
 package com.linklist;
 
 public class LinkedList {
+    // ====== BASIC NODE STRUCTURE ======
     public static class Node{
         int data;
         Node next;
@@ -12,8 +13,6 @@ public class LinkedList {
     }
     public static Node head;
     public static Node tail;
-
-    //===== add node, remove node , print , search =====
 
     //===== Add In LinkedList (ADD FIRST) =====
     public void addFirst(int data){

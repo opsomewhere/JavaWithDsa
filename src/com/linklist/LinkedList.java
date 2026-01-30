@@ -39,9 +39,9 @@ public class LinkedList {
             head = tail = newNode;
             return;
         }
-        //newNode next point to old node nead
+        // old tail point ot new newNord
         tail.next = newNode;
-        // head = newNord head
+        // tail is now newNord
         tail = newNode;
     }
 
@@ -86,12 +86,36 @@ public class LinkedList {
         } else if (size == 1) {
             int val = head.data;
             head = tail = null;
-            size--;
+            size =  0;
             return val;
         }
         int val = head.data;
         head = head.next;
         size--;
+        return val;
+    }
+
+    // ====== REMOVE LAST THE LINKELIST ======
+    public int removeLast(){
+        if(head == null){
+            System.out.println("List is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size--;
+            return val;
+        }
+        int val = head.data;
+        Node temp = head;
+        int j=0;
+        while(j < size){
+            temp = temp.next;
+            temp.next = null;
+            tail = temp;
+            size--;
+            return temp.data;
+        }
         return val;
     }
 
@@ -111,7 +135,11 @@ public class LinkedList {
         list.print();
         System.out.println(size);
 
+        list.removeLast();
+        list.print();
 
     }
-
 }
+
+
+

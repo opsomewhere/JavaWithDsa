@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // store 5 roll nos
+        // store 5 roll numbers
         int[] numbers = new int[5];
 
         // store 5 names
@@ -23,23 +23,21 @@ public class Main {
 //        Student kunal;
 //        kunal = new Student();
 
-        Student kunal = new Student(15, "Kunal Kushwaha", 85.4f);
+        Student op = new Student(15, "op somewhere", 85.4f);
         Student rahul = new Student(18, "Rahul Rana", 90.3f);
 
-//        kunal.rno = 13;
-//        kunal.name = "Kunal Kushwaha";
-//        kunal.marks = 88.5f;
 
 
-//        kunal.changeName("Shoe lover");
-//        kunal.greeting();
+//      kunal.changeName("Shoe lover");
+        op.greeting();
 
 //
-        System.out.println(kunal.rno);
-        System.out.println(kunal.name);
-        System.out.println(kunal.marks);
+        System.out.println(op.rno);
+        System.out.println(op.name);
+        System.out.println(op.marks);
 
-        Student random = new Student(kunal);
+//      CREATING THE COPY OF THE OBJ
+        Student random = new Student(op);
         System.out.println(random.name);
 
         Student random2 = new Student();
@@ -51,6 +49,7 @@ public class Main {
         one.name = "Something something";
 
         System.out.println(two.name);
+        System.out.println(one.name);
 
     }
 }
@@ -63,14 +62,6 @@ class Student {
     float marks = 90;
 
     // we need a way to add the values of the above
-    // properties object by object
-
-    // we need one word to access every object
-
-    void greeting() {
-        System.out.println("Hello! My name is " + this.name);
-    }
-
     void changeName(String name) {
         this.name = name;
     }
@@ -94,6 +85,11 @@ class Student {
         this.rno = rno;
         this.name = name;
         this.marks = marks;
+    }
+
+    // we need one word to access every object
+    void greeting() {
+        System.out.println("Hello! My name is " + this.name);
     }
 
 }

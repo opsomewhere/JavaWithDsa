@@ -1,18 +1,31 @@
 package com.fileio;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.lang.Math;
 
-public class Basic {
+
+
+
+class Basic {
     static void main(String[] args) {
-        // file name
+        int arr[] = {1,2,0,3,0,4,5,0};
 
-        File file = new File("D:\\JavaWithDsa\\src\\com\\fileio\\tr.txt");
-        try {
-            if (file.createNewFile()) {
-                System.out.println("File created");
+        int Czero =0;
+        int Idx = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                arr[arr.length - Czero-1] = arr[i];
+                Czero++;
+            } else if (arr[i] != 0){
+            arr[Idx] = arr[i];
+            Idx++;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+
+
+
+
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }

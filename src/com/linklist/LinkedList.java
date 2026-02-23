@@ -66,8 +66,6 @@ public class LinkedList {
         temp.next = newNode;
     }
 
-
-
     // ====== REMOVE FIRST THE LINKELIST ======
     public int removeFirst(){
         if(head == null){
@@ -107,6 +105,19 @@ public class LinkedList {
 
     }
 
+    // ====== PRINT THE LINKELIST ======
+    public  void print(){
+        if(head == null){
+            System.out.println("List is empty");
+            return;
+        }
+        LinkedList.Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data+"->");
+            temp = temp.next;
+        }
+        System.out.println("Null" + ", Size : "+ size);
+    }
 
     // ====== SEARCH THE LINKELIST ITERATIVE METHOD ======
     public  static void itrSearch(LinkedList list, int key){
@@ -126,7 +137,8 @@ public class LinkedList {
             i++;
         }
     }
-    // ====== SEARCH THE LINKELIST RECURSIVE METHOD======
+
+    // ====== SEARCH THE LINKELIST RECURSIVE METHOD ======
     public int healper(Node head, int key){
         if(head == null){
             return -1;
@@ -140,24 +152,27 @@ public class LinkedList {
         }
         return idex+1;
     }
-
     public int recSearch( int key){
         return healper(head, key);
     }
 
-    // ====== PRINT THE LINKELIST ======
-    public  void print(){
-        if(head == null){
-            System.out.println("List is empty");
-            return;
+
+    // ====== REVERSE A LINKELIST ITERATIVE METHOD ======
+    public void reverse(){
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while (curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
         }
-        LinkedList.Node temp = head;
-        while(temp!=null){
-            System.out.print(temp.data+"->");
-            temp = temp.next;
-        }
-        System.out.println("Null" + ", Size : "+ size);
+        head = prev;
     }
+
+
 
     static void main(String[] args) {
         LinkedList list = new LinkedList();
@@ -180,6 +195,11 @@ public class LinkedList {
         // ========= Search element in Linked List =========
         list.itrSearch(list, 9);
         System.out.println(list.recSearch(9));
+
+        // ========= Reverse a Linked List =========
+        list.reverse();
+        list.print();
+
 
     }
 

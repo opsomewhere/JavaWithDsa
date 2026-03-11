@@ -23,5 +23,7 @@ public class Main {
         // but cannot access BoxWeight class properties -- it cannot it is not the actual object of BoxWeight
         System.out.println("Box5 : "+box5.w);
         // System.out.println("Box5 : "+box5.weight); // give error
+
+        // hhi
     }
 }
